@@ -13,6 +13,11 @@ function toggleDropdown(){
 
 
 function toggleSubmenu(event){
+   const allSubOption = document.querySelectorAll('.sub-options.active')
+   allSubOption.forEach((submenu)=>{
+      submenu.classList.remove('active');
+   })
+   
    const submenu = event.target.nextElementSibling;
    submenu.classList.toggle('active');
 }
